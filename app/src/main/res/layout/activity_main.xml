@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Nicknames y marcador -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etPlayerX"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="Jugador X"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 - 0"
+            android:textSize="24sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/etPlayerO"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="Jugador O"
+            android:inputType="textPersonName"/>
+    </LinearLayout>
+
+    <!-- Estado del juego -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turno de X"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Spinner modo de juego -->
+    <Spinner
+        android:id="@+id/spinnerMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Spinner color de fondo -->
+    <Spinner
+        android:id="@+id/spinnerBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Tablero 3x3 con bordes individuales -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginBottom="16dp">
+
+        <Button android:id="@+id/btn0" style="@style/BoardButton" />
+        <Button android:id="@+id/btn1" style="@style/BoardButton" />
+        <Button android:id="@+id/btn2" style="@style/BoardButton" />
+        <Button android:id="@+id/btn3" style="@style/BoardButton" />
+        <Button android:id="@+id/btn4" style="@style/BoardButton" />
+        <Button android:id="@+id/btn5" style="@style/BoardButton" />
+        <Button android:id="@+id/btn6" style="@style/BoardButton" />
+        <Button android:id="@+id/btn7" style="@style/BoardButton" />
+        <Button android:id="@+id/btn8" style="@style/BoardButton" />
+
+    </GridLayout>
+
+    <!-- Botón reiniciar -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"/>
+
+    <!-- Integrantes del grupo -->
+    <TextView
+        android:id="@+id/tvCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Integrantes: JPereira, EMartínez, EGuadamuz"
+        android:textSize="10sp"
+        android:textColor="#555555"
+        android:layout_gravity="end"
+        android:padding="4dp"/>
+</LinearLayout>
